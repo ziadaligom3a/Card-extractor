@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-require_once '/app/app/vendor/autoload.php';
+//require_once '/app/app/vendor/autoload.php';
 
 use IDAnalyzer\CoreAPI;
 use Illuminate\Http\Request;
