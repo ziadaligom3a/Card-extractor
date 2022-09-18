@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+var_dump(exec('ls ../../../vendor'));
 require_once '../../../vendor/autoload.php';
 
 use IDAnalyzer\CoreAPI;
