@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-var_dump(exec('ls ../'));
-require_once '../../vendor/autoload.php';
+
+require_once '../../../vendor/autoload.php';
 
 use IDAnalyzer\CoreAPI;
 use Illuminate\Http\Request;
