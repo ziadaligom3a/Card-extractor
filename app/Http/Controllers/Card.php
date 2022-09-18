@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-var_dump(exec('pwd ../../../../'));
+var_dump(exec('pwd /app/app/'));
 require_once '../../../vendor/autoload.php';
 
 use IDAnalyzer\CoreAPI;
