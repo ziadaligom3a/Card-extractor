@@ -1,9 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AjaxController;
 use App\Http\Controllers\Card;
 use App\Http\Controllers\Done;
+use App\Http\Controllers\CardCrop;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AjaxController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,12 @@ use App\Http\Controllers\Done;
 */
 
 Route::get('/', function () {
-
-    return view('welcome');
+    return view('CARD');
+});
+Route::get('/crop', function () {
+    return view('CROP');
 });
 
-
 Route::post('card', [Card::class, 'Card']);
+Route::post('crop', [CardCrop::class, 'CROP'])->name('crop');
 

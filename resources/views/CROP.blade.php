@@ -15,7 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta name="csrf-token" content="{{ csrf_token() }}" />
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Electrical Service Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Electrical Service Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -222,10 +222,10 @@ RIGHT SIDEBAR TOGGLE SECTION
 	<div class="banner-dott">
 		<div class="main">
 				<div class="w3layouts_main_grid">
-				
-					<form class="w3_form_post" enctype="multipart/form-data" method="post" action="/card">
+
+					<form class="w3_form_post" enctype="multipart/form-data" method="post" action="/crop">
                         @csrf
-					
+
 						<input type="file" name="file" class="w3layouts_head" onchange="loadFile(event)" >
 				<input type="hidden" id="filecount" value='0'>
 
@@ -236,13 +236,28 @@ RIGHT SIDEBAR TOGGLE SECTION
                         image.src = URL.createObjectURL(event.target.files[0]);
                     };
                     </script>
-				
-					<div class="w3_main_grid">
+ <div class="w3_agileits_main_grid w3l_main_grid">
+    <span class="agileits_grid">
+        <label><span class="star">* </span> Width: 960 </label>
+    </span>
+    <br>
+    <span class="agileits_grid">
+        <label><span class="star">* </span> height: 1280 </label>
+    </span>
+    <br>
+    <span class="agileits_grid">
+        <label style="  white-space: nowrap ;
+        "><span class="star">*</span>The card must be in the middle of the photo</label>
+    </span>
+</div>
+<br>
+<br>
+			<div class="w3_main_grid">
 						<div class="w3_main_grid_right">
 							<input  class="btn btn-success btn-submit" type="submit" value="Submit">
 						</div>
 					</div>
-				
+
 
 				</form>
 			</div>
@@ -256,8 +271,8 @@ RIGHT SIDEBAR TOGGLE SECTION
 						});
 					</script>
 		<!-- //Calendar -->
-		
-			
+
+
 	<!---728x90--->
 		</div>
 	</div>

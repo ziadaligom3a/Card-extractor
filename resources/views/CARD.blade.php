@@ -1,3 +1,10 @@
+
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +71,7 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 </script>
 
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="https://p.w3layouts.com/assests/css/font-awesome.min.css">
+<body><link rel="stylesheet" href="https://p.w3layouts.com/assests/css/font-awesome.min.css">
 <!-- New toolbar-->
 <style>
 * {
@@ -207,38 +214,69 @@ RIGHT SIDEBAR TOGGLE SECTION
 }
 </style>
 
-<div class="center-container">
+
+<!-- banner -->
+	<!---728x90--->
+
+	<div class="center-container">
 	<div class="banner-dott">
 		<div class="main">
 				<div class="w3layouts_main_grid">
-                @if(Route::is('crop'))
-                <img src="{{ $value1 }}" />
-                @else
-                <img src="data:image/png;base64,{{ $value1 }}" />
-                @endif
-            @foreach($data as $d => $value)
-            <div class="w3_agileits_main_grid w3l_main_grid">
-                <span class="agileits_grid">
-                    <label>{{$d}} <span class="star">*</span></label>
-                    <input type="text" value="{{$value}}">
 
-                </span>
-            </div>
-            @endforeach
+					<form class="w3_form_post" enctype="multipart/form-data" method="post" action="/card">
+                        @csrf
 
+						<input type="file" name="file" class="w3layouts_head" onchange="loadFile(event)" >
+				<input type="hidden" id="filecount" value='0'>
 
-
-
-                </div>
-        </div>
-    </div>
+                <img src="" name="file" id="card" alt="">
+                <script>
+                    var loadFile = function(event) {
+                        var image = document.getElementById('card');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                    };
+                    </script>
+ <div class="w3_agileits_main_grid w3l_main_grid">
+    <span class="agileits_grid">
+        <label><span class="star">* </span> Width: 960 </label>
+    </span>
+    <br>
+    <span class="agileits_grid">
+        <label><span class="star">* </span> height: 1280 </label>
+    </span>
+    <br>
+    <span class="agileits_grid">
+        <label style="  white-space: nowrap ;
+        "><span class="star">*</span>The card must be in the middle of the photo</label>
+    </span>
 </div>
-<div class="w3_main_grid">
-    <div class="w3_main_grid_right">
-        <a href="/" class="btn btn-success btn-submit" >Back</a>
-    </div>
-</div>
+<br>
+<br>
+			<div class="w3_main_grid">
+						<div class="w3_main_grid_right">
+							<input  class="btn btn-success btn-submit" type="submit" value="Submit">
+						</div>
+					</div>
+
+
+				</form>
+			</div>
+	<!---728x90--->
+		<!-- Calendar -->
+			<link rel="stylesheet" href="css/jquery-ui.css" />
+				<script src="js/jquery-ui.js"></script>
+					<script>
+						$(function() {
+							$( "#datepicker" ).datepicker();
+						});
+					</script>
+		<!-- //Calendar -->
+
+
+	<!---728x90--->
+		</div>
+	</div>
+	</div>
+
 </body>
-
-
-    </html>
+</html>

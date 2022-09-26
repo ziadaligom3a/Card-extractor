@@ -8,9 +8,12 @@
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
         "idanalyzer/id-analyzer-php-sdk": "^1.2",
+        "imagecow/imagecow": "^2.4",
+        "intervention/image": "^2.7",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "mtownsend/remove-bg": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
