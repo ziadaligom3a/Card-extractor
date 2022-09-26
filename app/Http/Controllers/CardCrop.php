@@ -27,6 +27,7 @@ class CardCrop extends Controller
         $result = $scan['result'];
         Session::put('Done',true);
         return view('result',[
+
          'data' => $result,
          'value1' => $crop->base64()
         ]);
