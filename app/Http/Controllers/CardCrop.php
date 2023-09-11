@@ -24,12 +24,20 @@ class CardCrop extends Controller
         $core = new CoreAPI('kIkT6nxynxkG70NJX8VNDsBlx4Aihb76','US');
         $core->enableAuthentication('true','quick');
         $scan = $core->scan("images/$random.png");
-        $result = $scan['result'];
-        Session::put('Done',true);
-        return view('result',[
+        $result = @$scan['result'];
 
-         'data' => $result,
-         'value1' => $crop->base64()
-        ]);
+
+        Session::put('Done',true);
+        if($result){
+            return view('result',[
+                'data' => $result,
+            ]);
+
+        }else{
+                return view('result',[
+                'error' => $scan['error']['message'],
+                'value1' => $crop->base64()
+            ]);
+        }
     }
 }

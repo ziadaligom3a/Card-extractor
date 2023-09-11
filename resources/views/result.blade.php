@@ -212,19 +212,32 @@ RIGHT SIDEBAR TOGGLE SECTION
 		<div class="main">
 				<div class="w3layouts_main_grid">
                 @if(Route::is('crop'))
-                <img src="{{ $value1 }}" />
-                @else
-                <img src="data:image/png;base64,{{ $value1 }}" />
-                @endif
-            @foreach($data as $d => $value)
-            <div class="w3_agileits_main_grid w3l_main_grid">
-                <span class="agileits_grid">
-                    <label>{{$d}} <span class="star">*</span></label>
-                    <input type="text" value="{{$value}}">
 
-                </span>
-            </div>
-            @endforeach
+
+                @if($error)
+                    <p>{{ $error }}</p>
+
+
+                @endif
+                @endif
+
+
+
+
+
+                @if(@$data)
+                                <img src="data:image/png;base64,{{ $value1 }}" />
+
+                @foreach($data as $d => $value)
+                <div class="w3_agileits_main_grid w3l_main_grid">
+                    <span class="agileits_grid">
+                        <label>{{$d}} <span class="star">*</span></label>
+                        <input type="text" value="{{$value}}">
+
+                    </span>
+                </div>
+                @endforeach
+                @endif
 
 
 
